@@ -64,3 +64,28 @@ variable "database_subnet_cidrs" {
     }
 }
 
+variable "public_route_tags" {
+    type = string
+    default = "public-route"
+}
+
+variable "private_route_tags" {
+    type = string
+    default = "private-route"
+}
+
+variable "database_route_tags" {
+    type = string
+    default = "database-route"
+}
+
+variable "is_peering_required" {
+    default = false
+}
+
+variable "dest_cidr_block" {
+    default = "172.31.0.0/16"
+}
+
+
+
