@@ -9,3 +9,7 @@ output "az_zone" {
 output "default_info" {
     value = data.aws_vpc.default
 }
+
+output "subnet_ids" {
+    value = aws_subnet.public[*].id
+}
