@@ -13,3 +13,15 @@ output "default_info" {
 output "subnet_ids" {
     value = aws_subnet.public[*].id
 }
+
+output "backend_subnet_id" {
+    value = aws_subnet.private[*].id
+}
+
+output "database_subnet_id" {
+    value = aws_subnet.database[*].id
+}
+
+output "db_subnet_group" {
+    value = aws_db_subnet_group.default.name
+}
